@@ -1,0 +1,195 @@
+category,prompt_type,engine,brand,memory,search,lift,lift_lo,lift_hi,q,significant,bucket,unsupported_share,n_memory,n_search
+crypto,broad,anthropic,Coinbase,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,65.5,25,29
+crypto,broad,anthropic,Kraken,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,93.1,25,29
+crypto,broad,anthropic,Gemini (exchange),100.0,96.6,-3.4,-10.3,0.0,1.0,False,Anchored,100.0,25,29
+crypto,broad,anthropic,Crypto.com,40.0,96.6,56.6,36.0,76.0,0.0022,True,Search-dependent,89.3,25,29
+crypto,broad,anthropic,Binance,100.0,96.6,-3.4,-10.3,0.0,1.0,False,Anchored,67.9,25,29
+crypto,broad,anthropic,OKX,88.0,96.6,8.6,-5.8,24.0,0.5659,False,Anchored,100.0,25,29
+crypto,broad,anthropic,Robinhood,0.0,10.3,10.3,0.0,20.7,0.466,False,Peripheral,100.0,25,29
+crypto,broad,anthropic,Bybit,76.0,93.1,17.1,-1.8,36.6,0.3367,False,Anchored,70.4,25,29
+crypto,broad,anthropic,KuCoin,68.0,89.7,21.7,-0.7,41.7,0.2609,False,Anchored,100.0,25,29
+crypto,broad,anthropic,Bitstamp,32.0,6.9,-25.1,-45.1,-5.7,0.09,False,Peripheral,100.0,25,29
+crypto,broad,anthropic,eToro,0.0,41.4,41.4,24.1,58.6,0.0022,True,Peripheral,100.0,25,29
+crypto,broad,anthropic,Bitget,8.0,20.7,12.7,-5.7,30.5,0.466,False,Peripheral,100.0,25,29
+crypto,broad,anthropic,Uphold,0.0,41.4,41.4,24.1,58.6,0.0022,True,Peripheral,100.0,25,29
+crypto,broad,anthropic,Uniswap,44.0,100.0,56.0,36.0,76.0,0.0022,True,Search-dependent,100.0,25,29
+crypto,broad,anthropic,PancakeSwap,24.0,44.8,20.8,-3.9,45.5,0.3576,False,Peripheral,100.0,25,29
+crypto,broad,openai,Coinbase,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,100.0,15,15
+crypto,broad,openai,Kraken,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,100.0,15,15
+crypto,broad,openai,Gemini (exchange),100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,100.0,15,15
+crypto,broad,openai,Crypto.com,60.0,100.0,40.0,13.3,66.7,0.0424,True,Anchored,100.0,15,15
+crypto,broad,openai,Binance,100.0,80.0,-20.0,-40.0,0.0,0.4021,False,Anchored,100.0,15,15
+crypto,broad,openai,OKX,86.7,13.3,-73.3,-93.3,-46.7,0.003,True,Displaced,100.0,15,15
+crypto,broad,openai,Robinhood,0.0,46.7,46.7,20.0,73.3,0.0252,True,Peripheral,100.0,15,15
+crypto,broad,openai,Bybit,73.3,6.7,-66.7,-93.3,-40.0,0.003,True,Displaced,100.0,15,15
+crypto,broad,openai,KuCoin,33.3,0.0,-33.3,-60.0,-13.3,0.084,False,Peripheral,,15,15
+crypto,broad,openai,Bitstamp,53.3,6.7,-46.7,-73.3,-20.0,0.0424,True,Displaced,100.0,15,15
+crypto,broad,openai,eToro,0.0,6.7,6.7,0.0,20.0,1.0,False,Peripheral,100.0,15,15
+crypto,broad,openai,Cash App,0.0,33.3,33.3,13.3,60.0,0.084,False,Peripheral,100.0,15,15
+crypto,broad,openai,Uniswap,73.3,13.3,-60.0,-86.7,-26.7,0.0045,True,Displaced,100.0,15,15
+crypto,broad,openai,PancakeSwap,73.3,0.0,-73.3,-93.3,-46.7,0.003,True,Displaced,,15,15
+crypto,situational,anthropic,Coinbase,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,72.0,24,25
+crypto,situational,anthropic,Kraken,100.0,96.0,-4.0,-12.0,0.0,1.0,False,Anchored,75.0,24,25
+crypto,situational,anthropic,Gemini (exchange),100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,72.0,24,25
+crypto,situational,anthropic,Crypto.com,0.0,92.0,92.0,80.0,100.0,0.003,True,Search-dependent,87.0,24,25
+crypto,situational,anthropic,Binance,0.0,92.0,92.0,80.0,100.0,0.003,True,Search-dependent,73.9,24,25
+crypto,situational,anthropic,OKX,0.0,16.0,16.0,4.0,32.0,0.2507,False,Peripheral,100.0,24,25
+crypto,situational,anthropic,Robinhood,0.0,100.0,100.0,100.0,100.0,0.003,True,Search-dependent,100.0,24,25
+crypto,situational,anthropic,Bybit,0.0,4.0,4.0,0.0,12.0,1.0,False,Peripheral,100.0,24,25
+crypto,situational,anthropic,KuCoin,0.0,36.0,36.0,20.0,56.0,0.0045,True,Peripheral,100.0,24,25
+crypto,situational,anthropic,Bitstamp,0.0,28.0,28.0,12.0,48.0,0.0218,True,Peripheral,100.0,24,25
+crypto,situational,anthropic,eToro,0.0,28.0,28.0,12.0,44.0,0.0218,True,Peripheral,100.0,24,25
+crypto,situational,anthropic,Uphold,0.0,36.0,36.0,20.0,56.0,0.0072,True,Peripheral,100.0,24,25
+crypto,situational,openai,Coinbase,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,73.3,15,15
+crypto,situational,openai,Kraken,66.7,100.0,33.3,13.3,60.0,0.1475,False,Anchored,73.3,15,15
+crypto,situational,openai,Gemini (exchange),100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,13.3,15,15
+crypto,situational,openai,Crypto.com,0.0,53.3,53.3,26.7,80.0,0.0315,True,Search-dependent,100.0,15,15
+crypto,situational,openai,Binance,6.7,60.0,53.3,26.7,80.0,0.042,True,Search-dependent,100.0,15,15
+crypto,situational,openai,OKX,0.0,13.3,13.3,0.0,33.3,1.0,False,Peripheral,100.0,15,15
+crypto,situational,openai,Robinhood,26.7,100.0,73.3,53.3,93.3,0.009,True,Search-dependent,93.3,15,15
+crypto,situational,openai,Bybit,0.0,6.7,6.7,0.0,20.0,1.0,False,Peripheral,100.0,15,15
+crypto,situational,openai,Bitstamp,0.0,13.3,13.3,0.0,33.3,1.0,False,Peripheral,100.0,15,15
+crypto,situational,openai,Cash App,53.3,86.7,33.3,0.0,60.0,0.3178,False,Anchored,100.0,15,15
+crypto,situational,openai,PayPal,6.7,53.3,46.7,20.0,73.3,0.0832,False,Search-dependent,100.0,15,15
+live_sports,broad,anthropic,YouTube TV,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,50.0,26,30
+live_sports,broad,anthropic,Fubo,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,33.3,26,30
+live_sports,broad,anthropic,Sling TV,61.5,100.0,38.5,19.2,57.7,0.0017,True,Anchored,96.7,26,30
+live_sports,broad,anthropic,Hulu + Live TV,100.0,86.7,-13.3,-26.7,-3.3,0.2425,False,Anchored,65.4,26,30
+live_sports,broad,anthropic,DirecTV,42.3,63.3,21.0,-4.4,45.4,0.3558,False,Search-dependent,0.0,26,30
+live_sports,broad,anthropic,ESPN,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,30.0,26,30
+live_sports,broad,anthropic,Peacock,100.0,93.3,-6.7,-16.7,0.0,0.7466,False,Anchored,96.4,26,30
+live_sports,broad,anthropic,Paramount+,92.3,60.0,-32.3,-52.8,-11.8,0.0249,True,Anchored,88.9,26,30
+live_sports,broad,anthropic,Amazon Prime Video,11.5,3.3,-8.2,-23.1,6.2,0.5562,False,Peripheral,100.0,26,30
+live_sports,broad,anthropic,Apple TV,61.5,6.7,-54.9,-73.6,-33.3,0.0017,True,Displaced,100.0,26,30
+live_sports,broad,anthropic,Max,11.5,3.3,-8.2,-23.1,3.3,0.5562,False,Peripheral,100.0,26,30
+live_sports,broad,anthropic,DAZN,30.8,0.0,-30.8,-50.0,-15.4,0.006,True,Peripheral,,26,30
+live_sports,broad,anthropic,NBA League Pass,100.0,0.0,-100.0,-100.0,-100.0,0.0017,True,Displaced,,26,30
+live_sports,broad,anthropic,NFL+,69.2,0.0,-69.2,-84.6,-50.0,0.0017,True,Displaced,,26,30
+live_sports,broad,anthropic,MLB.TV,57.7,3.3,-54.4,-73.6,-35.1,0.0017,True,Displaced,100.0,26,30
+live_sports,broad,anthropic,NHL (ESPN+),0.0,3.3,3.3,0.0,10.0,1.0,False,Peripheral,100.0,26,30
+live_sports,broad,anthropic,Fox One,0.0,10.0,10.0,0.0,23.3,0.4503,False,Peripheral,33.3,26,30
+live_sports,broad,anthropic,CHSN,0.0,73.3,73.3,56.7,86.7,0.0017,True,Search-dependent,100.0,26,30
+live_sports,broad,openai,YouTube TV,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,40.0,15,15
+live_sports,broad,openai,Fubo,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,53.3,15,15
+live_sports,broad,openai,Sling TV,60.0,100.0,40.0,20.0,66.7,0.1154,False,Anchored,60.0,15,15
+live_sports,broad,openai,Hulu + Live TV,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,60.0,15,15
+live_sports,broad,openai,DirecTV,46.7,0.0,-46.7,-73.3,-20.0,0.0595,False,Peripheral,,15,15
+live_sports,broad,openai,ESPN,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,93.3,15,15
+live_sports,broad,openai,Peacock,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,100.0,15,15
+live_sports,broad,openai,Paramount+,100.0,93.3,-6.7,-20.0,0.0,1.0,False,Anchored,100.0,15,15
+live_sports,broad,openai,Amazon Prime Video,86.7,86.7,0.0,-26.7,26.7,1.0,False,Anchored,100.0,15,15
+live_sports,broad,openai,Apple TV,86.7,20.0,-66.7,-93.3,-40.0,0.0315,True,Displaced,100.0,15,15
+live_sports,broad,openai,Netflix,0.0,33.3,33.3,13.3,60.0,0.1557,False,Peripheral,100.0,15,15
+live_sports,broad,openai,Max,13.3,6.7,-6.7,-26.7,13.3,1.0,False,Peripheral,100.0,15,15
+live_sports,broad,openai,DAZN,60.0,6.7,-53.3,-80.0,-26.7,0.0315,True,Displaced,100.0,15,15
+live_sports,broad,openai,NBA League Pass,73.3,33.3,-40.0,-73.3,-6.7,0.1979,False,Displaced,100.0,15,15
+live_sports,broad,openai,NFL+,33.3,0.0,-33.3,-60.0,-13.3,0.1532,False,Peripheral,,15,15
+live_sports,broad,openai,MLB.TV,73.3,46.7,-26.7,-60.0,6.7,0.6099,False,Displaced,100.0,15,15
+live_sports,broad,openai,NHL (ESPN+),40.0,6.7,-33.3,-60.0,-6.7,0.206,False,Peripheral,100.0,15,15
+live_sports,situational,anthropic,YouTube TV,100.0,88.9,-11.1,-27.8,0.0,0.3686,False,Anchored,6.2,30,18
+live_sports,situational,anthropic,Fubo,90.0,72.2,-17.8,-42.2,5.6,0.5469,False,Anchored,7.7,30,18
+live_sports,situational,anthropic,Sling TV,6.7,55.6,48.9,25.6,72.2,0.0052,True,Search-dependent,70.0,30,18
+live_sports,situational,anthropic,Hulu + Live TV,36.7,61.1,24.4,-4.4,52.2,0.3686,False,Search-dependent,72.7,30,18
+live_sports,situational,anthropic,DirecTV,6.7,38.9,32.2,6.7,55.6,0.0394,True,Peripheral,28.6,30,18
+live_sports,situational,anthropic,ESPN,63.3,88.9,25.6,2.2,47.8,0.3686,False,Anchored,93.8,30,18
+live_sports,situational,anthropic,Peacock,3.3,11.1,7.8,-6.7,24.4,1.0,False,Peripheral,100.0,30,18
+live_sports,situational,anthropic,Paramount+,3.3,5.6,2.2,-10.0,16.7,1.0,False,Peripheral,100.0,30,18
+live_sports,situational,anthropic,Netflix,0.0,5.6,5.6,0.0,16.7,0.763,False,Peripheral,100.0,30,18
+live_sports,situational,anthropic,NBA League Pass,33.3,0.0,-33.3,-50.0,-16.7,0.0394,True,Peripheral,,30,18
+live_sports,situational,anthropic,NFL+,26.7,0.0,-26.7,-43.3,-13.3,0.1994,False,Peripheral,,30,18
+live_sports,situational,anthropic,CHSN,90.0,88.9,-1.1,-18.9,16.7,1.0,False,Anchored,0.0,30,18
+live_sports,situational,anthropic,NBC Sports Chicago,93.3,33.3,-60.0,-83.3,-36.6,0.0052,True,Displaced,100.0,30,18
+live_sports,situational,openai,YouTube TV,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,26.7,15,15
+live_sports,situational,openai,Fubo,60.0,86.7,26.7,0.0,53.3,0.5982,False,Anchored,76.9,15,15
+live_sports,situational,openai,Sling TV,93.3,80.0,-13.3,-40.0,13.3,1.0,False,Anchored,91.7,15,15
+live_sports,situational,openai,Hulu + Live TV,86.7,80.0,-6.7,-33.3,20.0,1.0,False,Anchored,91.7,15,15
+live_sports,situational,openai,DirecTV,60.0,53.3,-6.7,-40.0,26.7,1.0,False,Anchored,87.5,15,15
+live_sports,situational,openai,ESPN,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,100.0,15,15
+live_sports,situational,openai,Peacock,26.7,80.0,53.3,20.0,80.0,0.1023,False,Search-dependent,100.0,15,15
+live_sports,situational,openai,Paramount+,6.7,53.3,46.7,20.0,73.3,0.1023,False,Search-dependent,87.5,15,15
+live_sports,situational,openai,Amazon Prime Video,26.7,73.3,46.7,13.3,73.3,0.1023,False,Search-dependent,100.0,15,15
+live_sports,situational,openai,Netflix,0.0,26.7,26.7,6.7,46.7,0.3841,False,Peripheral,100.0,15,15
+live_sports,situational,openai,Max,6.7,0.0,-6.7,-20.0,0.0,1.0,False,Peripheral,,15,15
+live_sports,situational,openai,NBA League Pass,6.7,13.3,6.7,-13.3,26.7,1.0,False,Peripheral,100.0,15,15
+live_sports,situational,openai,NFL+,0.0,40.0,40.0,13.3,66.7,0.1023,False,Peripheral,66.7,15,15
+live_sports,situational,openai,CHSN,80.0,100.0,20.0,0.0,40.0,0.5982,False,Anchored,0.0,15,15
+live_sports,situational,openai,NBC Sports Chicago,20.0,0.0,-20.0,-40.0,0.0,0.5982,False,Peripheral,,15,15
+meal_kits,broad,anthropic,HelloFresh,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,85.7,29,28
+meal_kits,broad,anthropic,Green Chef,100.0,96.4,-3.6,-10.7,0.0,0.6823,False,Anchored,100.0,29,28
+meal_kits,broad,anthropic,Home Chef,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,96.4,29,28
+meal_kits,broad,anthropic,Blue Apron,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,96.4,29,28
+meal_kits,broad,anthropic,Sunbasket,100.0,14.3,-85.7,-96.4,-71.4,0.002,True,Displaced,100.0,29,28
+meal_kits,broad,anthropic,Purple Carrot,86.2,100.0,13.8,3.4,27.6,0.2061,False,Anchored,100.0,29,28
+meal_kits,broad,anthropic,Dinnerly,93.1,100.0,6.9,0.0,17.2,0.6823,False,Anchored,96.4,29,28
+meal_kits,broad,anthropic,Hungryroot,0.0,100.0,100.0,100.0,100.0,0.002,True,Search-dependent,100.0,29,28
+meal_kits,broad,anthropic,Marley Spoon,51.7,67.9,16.1,-8.4,40.8,0.4478,False,Anchored,94.7,29,28
+meal_kits,broad,anthropic,CookUnity,13.8,53.6,39.8,15.5,61.0,0.0032,True,Search-dependent,100.0,29,28
+meal_kits,broad,anthropic,Gobble,13.8,64.3,50.5,29.3,71.7,0.002,True,Search-dependent,100.0,29,28
+meal_kits,broad,anthropic,Tovala,0.0,67.9,67.9,50.0,85.7,0.002,True,Search-dependent,94.7,29,28
+meal_kits,broad,anthropic,Trifecta,34.5,3.6,-30.9,-48.3,-13.4,0.0114,True,Peripheral,100.0,29,28
+meal_kits,broad,anthropic,Tempo,0.0,28.6,28.6,14.2,46.4,0.008,True,Peripheral,100.0,29,28
+meal_kits,broad,anthropic,Freshly,13.8,0.0,-13.8,-27.6,-3.4,0.2039,False,Peripheral,,29,28
+meal_kits,broad,openai,HelloFresh,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,100.0,15,15
+meal_kits,broad,openai,Green Chef,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,100.0,15,15
+meal_kits,broad,openai,Home Chef,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,100.0,15,15
+meal_kits,broad,openai,Blue Apron,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,100.0,15,15
+meal_kits,broad,openai,Sunbasket,80.0,20.0,-60.0,-86.7,-26.7,0.08,False,Displaced,100.0,15,15
+meal_kits,broad,openai,Purple Carrot,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,100.0,15,15
+meal_kits,broad,openai,Dinnerly,80.0,40.0,-40.0,-73.3,-6.7,0.3385,False,Displaced,100.0,15,15
+meal_kits,broad,openai,Hungryroot,6.7,33.3,26.7,0.0,53.3,0.6957,False,Peripheral,100.0,15,15
+meal_kits,broad,openai,Marley Spoon,46.7,40.0,-6.7,-40.0,33.3,1.0,False,Peripheral,100.0,15,15
+meal_kits,broad,openai,CookUnity,20.0,66.7,46.7,13.3,73.3,0.1679,False,Search-dependent,100.0,15,15
+meal_kits,broad,openai,Gobble,20.0,6.7,-13.3,-40.0,6.7,1.0,False,Peripheral,100.0,15,15
+meal_kits,situational,anthropic,HelloFresh,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,57.1,29,28
+meal_kits,situational,anthropic,Green Chef,93.1,100.0,6.9,0.0,17.2,0.8671,False,Anchored,82.1,29,28
+meal_kits,situational,anthropic,Home Chef,13.8,100.0,86.2,72.4,96.6,0.004,True,Search-dependent,75.0,29,28
+meal_kits,situational,anthropic,Blue Apron,20.7,60.7,40.0,15.5,61.3,0.0187,True,Search-dependent,52.9,29,28
+meal_kits,situational,anthropic,Sunbasket,0.0,14.3,14.3,3.6,28.6,0.1647,False,Peripheral,100.0,29,28
+meal_kits,situational,anthropic,Purple Carrot,44.8,46.4,1.6,-23.3,26.6,1.0,False,Peripheral,76.9,29,28
+meal_kits,situational,anthropic,Dinnerly,100.0,21.4,-78.6,-92.9,-64.2,0.004,True,Displaced,100.0,29,28
+meal_kits,situational,anthropic,Hungryroot,0.0,3.6,3.6,0.0,10.7,0.8671,False,Peripheral,100.0,29,28
+meal_kits,situational,anthropic,Marley Spoon,0.0,14.3,14.3,3.6,28.6,0.1647,False,Peripheral,100.0,29,28
+meal_kits,situational,anthropic,CookUnity,0.0,7.1,7.1,0.0,17.9,0.6437,False,Peripheral,100.0,29,28
+meal_kits,situational,anthropic,Gobble,0.0,3.6,3.6,0.0,10.7,0.8671,False,Peripheral,100.0,29,28
+meal_kits,situational,openai,HelloFresh,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,80.0,15,15
+meal_kits,situational,openai,Green Chef,93.3,73.3,-20.0,-46.7,6.7,1.0,False,Anchored,100.0,15,15
+meal_kits,situational,openai,Home Chef,93.3,93.3,0.0,-20.0,20.0,1.0,False,Anchored,78.6,15,15
+meal_kits,situational,openai,Blue Apron,66.7,46.7,-20.0,-53.3,13.3,1.0,False,Displaced,100.0,15,15
+meal_kits,situational,openai,Sunbasket,6.7,6.7,0.0,-20.0,20.0,1.0,False,Peripheral,100.0,15,15
+meal_kits,situational,openai,Purple Carrot,60.0,100.0,40.0,20.0,66.7,0.2239,False,Anchored,80.0,15,15
+meal_kits,situational,openai,Dinnerly,60.0,60.0,0.0,-33.3,33.3,1.0,False,Anchored,100.0,15,15
+meal_kits,situational,openai,Hungryroot,13.3,46.7,33.3,0.0,60.0,0.9275,False,Peripheral,100.0,15,15
+meal_kits,situational,openai,Marley Spoon,6.7,0.0,-6.7,-20.0,0.0,1.0,False,Peripheral,,15,15
+meal_kits,situational,openai,CookUnity,0.0,13.3,13.3,0.0,33.3,1.0,False,Peripheral,100.0,15,15
+meal_kits,situational,openai,Gobble,20.0,6.7,-13.3,-40.0,6.7,1.0,False,Peripheral,100.0,15,15
+secured_cards,broad,anthropic,Bank of America,20.0,90.9,70.9,49.3,88.0,0.0017,True,Search-dependent,100.0,25,22
+secured_cards,broad,anthropic,Capital One,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,95.5,25,22
+secured_cards,broad,anthropic,Chime,64.0,18.2,-45.8,-68.0,-20.2,0.005,True,Displaced,50.0,25,22
+secured_cards,broad,anthropic,DCU,0.0,81.8,81.8,63.6,95.5,0.0017,True,Search-dependent,100.0,25,22
+secured_cards,broad,anthropic,Discover,100.0,90.9,-9.1,-22.7,0.0,0.2711,False,Anchored,95.0,25,22
+secured_cards,broad,anthropic,First Progress,0.0,45.5,45.5,22.7,68.2,0.0017,True,Peripheral,100.0,25,22
+secured_cards,broad,anthropic,Navy Federal,0.0,22.7,22.7,4.5,40.9,0.0207,True,Peripheral,100.0,25,22
+secured_cards,broad,anthropic,OpenSky,32.0,77.3,45.3,19.6,70.4,0.006,True,Search-dependent,100.0,25,22
+secured_cards,broad,anthropic,Self,32.0,0.0,-32.0,-52.0,-16.0,0.0067,True,Peripheral,,25,22
+secured_cards,broad,anthropic,U.S. Bank,4.0,0.0,-4.0,-12.0,0.0,1.0,False,Peripheral,,25,22
+secured_cards,broad,openai,Bank of America,93.3,86.7,-6.7,-26.7,13.3,1.0,False,Anchored,53.8,15,15
+secured_cards,broad,openai,Capital One,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,80.0,15,15
+secured_cards,broad,openai,Chime,33.3,6.7,-26.7,-53.3,0.0,0.7846,False,Peripheral,100.0,15,15
+secured_cards,broad,openai,DCU,0.0,20.0,20.0,0.0,40.0,0.7846,False,Peripheral,100.0,15,15
+secured_cards,broad,openai,Discover,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,66.7,15,15
+secured_cards,broad,openai,Navy Federal,40.0,13.3,-26.7,-60.0,0.0,0.7846,False,Peripheral,50.0,15,15
+secured_cards,broad,openai,OpenSky,100.0,86.7,-13.3,-33.3,0.0,1.0,False,Anchored,100.0,15,15
+secured_cards,broad,openai,Self,6.7,0.0,-6.7,-20.0,0.0,1.0,False,Peripheral,,15,15
+secured_cards,broad,openai,U.S. Bank,100.0,93.3,-6.7,-20.0,0.0,1.0,False,Anchored,57.1,15,15
+secured_cards,situational,anthropic,Bank of America,0.0,12.0,12.0,0.0,24.0,1.0,False,Peripheral,100.0,25,25
+secured_cards,situational,anthropic,Capital One,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,36.0,25,25
+secured_cards,situational,anthropic,Chime,40.0,24.0,-16.0,-40.0,8.0,1.0,False,Peripheral,83.3,25,25
+secured_cards,situational,anthropic,Discover,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,28.0,25,25
+secured_cards,situational,anthropic,OpenSky,0.0,100.0,100.0,100.0,100.0,0.005,True,Search-dependent,100.0,25,25
+secured_cards,situational,anthropic,Self,4.0,4.0,0.0,-12.0,12.0,1.0,False,Peripheral,100.0,25,25
+secured_cards,situational,openai,Bank of America,93.3,100.0,6.7,0.0,20.0,1.0,False,Anchored,66.7,15,15
+secured_cards,situational,openai,Capital One,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,53.3,15,15
+secured_cards,situational,openai,Discover,100.0,100.0,0.0,0.0,0.0,1.0,False,Anchored,40.0,15,15
+secured_cards,situational,openai,Navy Federal,33.3,20.0,-13.3,-46.7,20.0,1.0,False,Peripheral,66.7,15,15
+secured_cards,situational,openai,OpenSky,66.7,33.3,-33.3,-66.7,0.0,1.0,False,Displaced,100.0,15,15
+secured_cards,situational,openai,U.S. Bank,100.0,80.0,-20.0,-40.0,0.0,1.0,False,Anchored,66.7,15,15

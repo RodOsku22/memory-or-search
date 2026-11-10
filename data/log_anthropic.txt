@@ -1,0 +1,10 @@
+480 planned, 40 already done, 440 to run
+50/440 done, 0 errors
+100/440 done, 0 errors
+150/440 done, 0 errors
+200/440 done, 0 errors
+250/440 done, 0 errors
+300/440 done, 0 errors
+350/440 done, 0 errors
+400/440 done, 13 errors
+finished: 440 written, 53 errors

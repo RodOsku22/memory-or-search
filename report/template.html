@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Memory or Search?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: a research report on a quiet paper surface, one reading column with full-width exhibits. */
+:root {
+  color-scheme: light;
+  --paper: #f9f9f7;
+  --surface: #fcfcfb;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --muted: #898781;
+  --rule: #e1e0d9;
+  --axis: #c3c2b7;
+  --accent: #2a78d6;
+  --memory: #eb6834;
+  --search: #2a78d6;
+  --chip: #eeede8;
+  --seq-0: #f0efec; --seq-1: #cde2fb; --seq-2: #9ec5f4; --seq-3: #6da7ec; --seq-4: #3987e5; --seq-5: #256abf; --seq-6: #184f95; --seq-7: #0d366b;
+  --display: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+    --rule: #2c2c2a; --axis: #383835; --accent: #3987e5; --memory: #d95926; --search: #3987e5; --chip: #262624;
+    --seq-0: #262624; --seq-1: #104281; --seq-2: #184f95; --seq-3: #1c5cab; --seq-4: #256abf; --seq-5: #2a78d6; --seq-6: #5598e7; --seq-7: #9ec5f4;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+  --rule: #2c2c2a; --axis: #383835; --accent: #3987e5; --memory: #d95926; --search: #3987e5; --chip: #262624;
+  --seq-0: #262624; --seq-1: #104281; --seq-2: #184f95; --seq-3: #1c5cab; --seq-4: #256abf; --seq-5: #2a78d6; --seq-6: #5598e7; --seq-7: #9ec5f4;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--paper); color: var(--ink); font: 16px/1.6 var(--body); }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 40px 20px 80px; display: grid; gap: 48px; }
+.read { max-width: 68ch; }
+h1, h2, h3 { font-family: var(--display); font-weight: 600; text-wrap: balance; margin: 0; line-height: 1.2; }
+h1 { font-size: clamp(32px, 5vw, 48px); }
+h2 { font-size: 26px; }
+h3 { font-size: 18px; font-family: var(--body); font-weight: 600; }
+p { margin: 0; }
+.stack { display: grid; gap: 14px; }
+.eyebrow { font: 500 13px/1 var(--mono); letter-spacing: .04em; text-transform: uppercase; color: var(--ink-2); }
+.byline { color: var(--ink-2); font-size: 15px; }
+.pilot { display: inline-block; font: 500 12px/1 var(--mono); padding: 6px 8px; border: 1px solid var(--axis); border-radius: 4px; color: var(--ink-2); }
+header.top { display: grid; gap: 16px; padding-bottom: 32px; border-bottom: 1px solid var(--rule); }
+.lede { font-size: 19px; color: var(--ink-2); max-width: 62ch; }
+.takeaways { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.tile { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 18px; display: grid; gap: 8px; align-content: start; }
+.tile .v { font: 600 40px/1 var(--body); }
+.tile .l { color: var(--ink-2); font-size: 15px; }
+dl.gloss { display: grid; grid-template-columns: minmax(140px, 200px) 1fr; gap: 10px 20px; margin: 0; }
+dl.gloss dt { font-weight: 600; }
+dl.gloss dd { margin: 0; color: var(--ink-2); }
+@media (max-width: 560px) { dl.gloss { grid-template-columns: 1fr; } dl.gloss dd { margin-bottom: 8px; } }
+.exhibit { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 20px; display: grid; gap: 14px; }
+.exhibit .cap { color: var(--ink-2); font-size: 14px; max-width: 80ch; }
+.exhibit .num { font: 500 12px/1 var(--mono); color: var(--muted); }
+.legend { display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; color: var(--ink-2); align-items: center; }
+.legend .k { display: inline-flex; align-items: center; gap: 6px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.ring { width: 10px; height: 10px; border-radius: 50%; display: inline-block; border: 2px solid var(--ink-2); }
+.tick { width: 2px; height: 12px; background: var(--muted); display: inline-block; }
+.chartbox { overflow-x: auto; }
+svg text { fill: var(--ink-2); font-family: var(--body); font-size: 12px; }
+svg .lbl { fill: var(--ink); font-size: 13px; }
+svg .grid { stroke: var(--rule); stroke-width: 1; }
+svg .base { stroke: var(--axis); stroke-width: 1; }
+.controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; }
+.controls label { display: grid; gap: 4px; font-size: 12px; color: var(--ink-2); }
+select { font: 14px var(--body); color: var(--ink); background: var(--paper); border: 1px solid var(--axis); border-radius: 6px; padding: 6px 8px; }
+select:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+button { font: 500 14px var(--body); color: var(--ink); background: var(--paper); border: 1px solid var(--axis); border-radius: 6px; padding: 7px 12px; cursor: pointer; }
+button:hover { background: var(--chip); }
+.chipb { display: inline-block; font: 500 12px/1 var(--body); padding: 5px 8px; border-radius: 999px; background: var(--chip); color: var(--ink); white-space: nowrap; }
+.chipb::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 6px; background: var(--muted); vertical-align: 1px; }
+.chipb[data-b="Anchored"]::before { background: var(--ink-2); }
+.chipb[data-b="Search-dependent"]::before { background: var(--search); }
+.chipb[data-b="Displaced"]::before { background: var(--memory); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-weight: 600; color: var(--ink-2); font-size: 13px; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+.tablewrap { overflow: auto; max-height: 460px; padding: 0; }
+.tablewrap th { position: sticky; top: 0; background: var(--surface); }
+.lens { display: grid; gap: 16px; }
+.lensgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.lcard { border: 1px solid var(--rule); border-radius: 8px; padding: 14px; display: grid; gap: 8px; background: var(--paper); }
+.lcard .row { display: flex; justify-content: space-between; gap: 8px; font-size: 14px; }
+.lcard .row span:last-child { font-variant-numeric: tabular-nums; font-weight: 500; }
+.meter { height: 8px; border-radius: 4px; background: var(--chip); position: relative; overflow: hidden; }
+.meter > i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--search); border-radius: 4px; }
+.tip { position: fixed; pointer-events: none; background: var(--surface); color: var(--ink); border: 1px solid var(--rule); border-radius: 6px; padding: 8px 10px; font-size: 13px; box-shadow: 0 4px 16px rgba(0,0,0,.12); display: none; z-index: 10; max-width: 280px; }
+.tip b { font-variant-numeric: tabular-nums; }
+.note { font-size: 14px; color: var(--ink-2); }
+ul.tight { margin: 0; padding-left: 20px; display: grid; gap: 8px; }
+code { font-family: var(--mono); font-size: 0.9em; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+blockquote { margin: 0; padding-left: 16px; border-left: 3px solid var(--rule); color: var(--ink-2); }
+footer { color: var(--muted); font-size: 13px; border-top: 1px solid var(--rule); padding-top: 16px; }
+@media (prefers-reduced-motion: no-preference) { .meter > i { transition: width .3s ease; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="eyebrow">Independent research report &middot; pilot</div>
+  <h1>Memory or Search? Where AI brand recommendations come from</h1>
+  <p class="lede">__LEDE__</p>
+  <div class="byline">Rod Oskouian &middot; __DATE__ &middot; <span class="pilot">907 answers &middot; __NRUNS__ runs per cell</span></div>
+</header>
+
+<section class="stack read">
+  <h2>Author's Note</h2>
+  __AUTHORS_NOTE__
+</section>
+
+<section class="stack">
+  <h2>Key Takeaways</h2>
+  <div class="takeaways" id="takeaways"></div>
+</section>
+
+<section class="stack read">
+  <h2>Glossary</h2>
+  <dl class="gloss">
+    <dt>Memory</dt><dd>What the model says with web search turned off. It can only draw on what it learned in training.</dd>
+    <dt>Search</dt><dd>The same model and prompt with web search turned on, so live pages can add to or override memory.</dd>
+    <dt>Visibility</dt><dd>Share of answering runs that name a brand. An answering run names at least one brand from the category's list.</dd>
+    <dt>Search lift</dt><dd>Search visibility minus memory visibility, in percentage points.</dd>
+    <dt>Movable share</dt><dd>Of a brand's visibility with search on, the part that memory alone does not produce: max(0, search &minus; memory) &divide; search. A rough gauge of how much visibility depends on what is on the web right now.</dd>
+    <dt>TVD</dt><dd>Total variation distance between two brand profiles: the share of recommendation weight that would have to move to turn one into the other. 0 is identical, 1 is no overlap.</dd>
+    <dt>Noise floor</dt><dd>The 95th percentile of TVD when memory and search labels are shuffled at random. Movement above it is unlikely to be run-to-run chance.</dd>
+  </dl>
+</section>
+
+<section class="stack">
+  <h2>Key Exhibits</h2>
+
+  <div class="exhibit" id="ex1">
+    <div class="num">Exhibit 1</div>
+    <h3>Search reshuffles Claude&rsquo;s recommendations far more than ChatGPT&rsquo;s</h3>
+    <div class="legend">
+      <span class="k"><span class="ring"></span>Broad prompt</span>
+      <span class="k"><span class="dot" style="background:var(--ink-2)"></span>Situational prompt</span>
+      <span class="k"><span class="tick"></span>Noise floor (p95)</span>
+    </div>
+    <div class="chartbox"><svg id="ex1svg" role="img" aria-label="Distance between memory and search brand profiles by category, engine and prompt type"></svg></div>
+    <p class="cap">TVD between each engine's memory-only and search-on brand profiles. Further right means turning search on reshuffles more of the recommendations. The tick marks the higher of the two prompts' permutation noise floors; dots right of it moved more than run-to-run chance would.</p>
+  </div>
+
+  <div class="exhibit" id="ex2">
+    <div class="num">Exhibit 2</div>
+    <h3>Brand by brand: what the model remembers vs. what it says after searching</h3>
+    <div class="controls">
+      <label for="c2cat">Category<select id="c2cat"></select></label>
+      <label for="c2pt">Prompt<select id="c2pt"><option value="broad">Broad</option><option value="situational">Situational</option></select></label>
+      <label for="c2eng">Engine<select id="c2eng"></select></label>
+    </div>
+    <div class="legend">
+      <span class="k"><span class="ring" style="border-color:var(--memory)"></span>Memory (search off)</span>
+      <span class="k"><span class="dot" style="background:var(--search)"></span>Search on</span>
+    </div>
+    <div class="chartbox"><svg id="ex2svg" role="img" aria-label="Memory versus search visibility per brand"></svg></div>
+    <p class="cap" id="ex2cap"></p>
+  </div>
+
+  <div class="exhibit" id="ex3">
+    <div class="num">Exhibit 3</div>
+    <h3>On broad questions in three of four categories, ChatGPT and Claude agree more from memory than after searching</h3>
+    <div class="legend">
+      <span class="k"><span class="dot" style="background:var(--memory)"></span>Memory</span>
+      <span class="k"><span class="dot" style="background:var(--search)"></span>Search on</span>
+    </div>
+    <div class="chartbox"><svg id="ex3svg" role="img" aria-label="Mean cross-engine visibility range, memory versus search"></svg></div>
+    <p class="cap">Mean range of a brand's visibility between ChatGPT and Claude (highest minus lowest, in points), averaged over brands either engine named. The same two engines feed both bars, so the comparison is like for like. Petra Labs found 26 of 40 brands swing 50+ points across five engines with search on; this asks whether the models' memories already disagree that much.</p>
+  </div>
+</section>
+
+<section class="stack" id="lens">
+  <h2>Layer Lens</h2>
+  <p class="read">Pick a category and brand to see, per engine and prompt, how much of its visibility comes from memory and how much depends on search. Search-dependent visibility is the part that content and placements can move between model releases.</p>
+  <div class="exhibit lens">
+    <div class="controls">
+      <label for="lcat">Category<select id="lcat"></select></label>
+      <label for="lbrand">Brand<select id="lbrand"></select></label>
+    </div>
+    <div class="lensgrid" id="lensgrid"></div>
+    <p class="note">Bucket thresholds: strong means visible in at least 50% of answering runs. Anchored = strong in both; Search-dependent = strong only with search; Displaced = strong only from memory; Peripheral = strong in neither. Lift intervals are bootstrap 95% CIs; "significant" means Benjamini&ndash;Hochberg q &le; 0.05 within the engine and prompt.</p>
+  </div>
+</section>
+
+<section class="stack read">
+  <h2>Results</h2>
+  __RESULTS__
+</section>
+
+<section class="stack read">
+  <h2>What this means for spend and attribution</h2>
+  __IMPLICATIONS__
+</section>
+
+<section class="stack read">
+  <h2>Experiment Setup</h2>
+  __SETUP__
+</section>
+
+<section class="stack read">
+  <h2>Limitations</h2>
+  __LIMITS__
+</section>
+
+<section class="stack read">
+  <h2>Future Work</h2>
+  __FUTURE__
+</section>
+
+<section class="stack">
+  <h2>Data</h2>
+  <p class="read note">Every brand, engine, prompt and condition in this pilot. Copy the table as CSV to reuse it.</p>
+  <div><button id="copycsv" type="button">Copy results as CSV</button> <span id="copymsg" class="note" aria-live="polite"></span></div>
+  <div class="exhibit tablewrap"><table id="datatable"></table></div>
+</section>
+
+<footer>
+  __FOOTER__
+</footer>
+</div>
+<div class="tip" id="tip" role="tooltip"></div>
+
+<script>
+const DATA = __DATA__;
+const NS = "http://www.w3.org/2000/svg";
+const ENG = DATA.engines, CATS = DATA.categories;
+const catKeys = Object.keys(CATS).filter(c => DATA.brands.some(b => b.category === c));
+const engKeys = Object.keys(ENG).filter(e => DATA.brands.some(b => b.engine === e));
+const fmt = v => (v == null || isNaN(v)) ? "–" : (Math.round(v * 10) / 10).toString();
+
+function el(tag, attrs, parent) { const n = document.createElementNS(NS, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); if (parent) parent.appendChild(n); return n; }
+function txt(parent, x, y, s, attrs = {}) { const t = el("text", Object.assign({ x, y }, attrs), parent); t.textContent = s; return t; }
+const tip = document.getElementById("tip");
+function showTip(e, rows) {
+  tip.replaceChildren();
+  rows.forEach(([v, l]) => { const d = document.createElement("div"); const b = document.createElement("b"); b.textContent = v; d.appendChild(b); if (l) d.appendChild(document.createTextNode(" " + l)); tip.appendChild(d); });
+  tip.style.display = "block";
+  const r = (e.target.getBoundingClientRect ? e.target.getBoundingClientRect() : { left: e.clientX, top: e.clientY, width: 0 });
+  const x = (e.clientX ?? r.left + r.width / 2) + 12, y = (e.clientY ?? r.top) + 12;
+  tip.style.left = Math.min(x, window.innerWidth - tip.offsetWidth - 8) + "px";
+  tip.style.top = Math.min(y, window.innerHeight - tip.offsetHeight - 8) + "px";
+}
+function hideTip() { tip.style.display = "none"; }
+function hover(node, rows) {
+  node.setAttribute("tabindex", "0");
+  node.addEventListener("pointermove", e => showTip(e, rows));
+  node.addEventListener("pointerleave", hideTip);
+  node.addEventListener("focus", e => { const r = node.getBoundingClientRect(); showTip({ clientX: r.right, clientY: r.top, target: node }, rows); });
+  node.addEventListener("blur", hideTip);
+}
+
+/* Takeaways (computed) */
+(function () {
+  const box = document.getElementById("takeaways");
+  (DATA.takeaways || []).forEach(t => {
+    const d = document.createElement("div"); d.className = "tile";
+    const v = document.createElement("div"); v.className = "v"; v.textContent = t.value;
+    const l = document.createElement("div"); l.className = "l"; l.textContent = t.label;
+    d.append(v, l); box.appendChild(d);
+  });
+})();
+
+/* Exhibit 1: dot plot of TVD(memory, search) */
+function drawEx1() {
+  const svg = document.getElementById("ex1svg"); svg.replaceChildren();
+  const rows = [];
+  catKeys.forEach(c => engKeys.forEach(e => rows.push({ c, e })));
+  const L = 250, R = 30, T = 24, rowH = 30, gapCat = 14;
+  const W = Math.max(640, svg.parentNode.clientWidth || 900);
+  const H = T + rows.length * rowH + catKeys.length * gapCat + 30;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("width", W); svg.setAttribute("height", H);
+  const x = v => L + v * (W - L - R);
+  [0, .25, .5, .75, 1].forEach(t => { el("line", { x1: x(t), x2: x(t), y1: T - 8, y2: H - 26, class: "grid" }, svg); txt(svg, x(t), H - 10, t.toFixed(2), { "text-anchor": "middle" }); });
+  txt(svg, L, 12, "TVD between memory and search profiles  (0 = same brands, 1 = no overlap)");
+  let y = T, lastCat = null;
+  rows.forEach(({ c, e }) => {
+    if (c !== lastCat) { if (lastCat) y += gapCat; lastCat = c; }
+    const cy = y + rowH / 2;
+    if (e === engKeys[0]) txt(svg, 0, cy + 4, CATS[c].label, { class: "lbl", "font-weight": "600" });
+    txt(svg, 150, cy + 4, ENG[e].replace(" (API)", ""));
+    const cells = DATA.cells.filter(k => k.category === c && k.engine === e);
+    const b = cells.find(k => k.prompt_type === "broad"), s = cells.find(k => k.prompt_type === "situational");
+    if (b && s) el("line", { x1: x(b.tvd_memory_search), x2: x(s.tvd_memory_search), y1: cy, y2: cy, stroke: "var(--axis)", "stroke-width": 2 }, svg);
+    if (cells.length) { const nf = Math.max(...cells.map(k => k.noise_floor)); el("line", { x1: x(nf), x2: x(nf), y1: cy - 7, y2: cy + 7, stroke: "var(--muted)", "stroke-width": 2 }, svg); }
+    [b, s].forEach((k, i) => {
+      if (!k) return;
+      const g = el("g", {}, svg);
+      el("circle", { cx: x(k.tvd_memory_search), cy, r: 12, fill: "transparent" }, g);
+      el("circle", i === 0 ? { cx: x(k.tvd_memory_search), cy, r: 5, fill: "var(--surface)", stroke: "var(--ink-2)", "stroke-width": 2 } : { cx: x(k.tvd_memory_search), cy, r: 5.5, fill: "var(--ink-2)", stroke: "var(--surface)", "stroke-width": 2 }, g);
+      hover(g, [[fmt(k.tvd_memory_search), "TVD"], [fmt(k.noise_floor), "noise floor"], [`${CATS[c].label} · ${ENG[e]} · ${k.prompt_type}`, ""], [`${k.n_memory} / ${k.n_search}`, "answering runs (memory / search)"]]);
+    });
+    y += rowH;
+  });
+}
+
+/* Exhibit 2: dumbbell */
+function fillSelect(sel, items, val) { sel.replaceChildren(); items.forEach(([v, l]) => { const o = document.createElement("option"); o.value = v; o.textContent = l; sel.appendChild(o); }); if (val) sel.value = val; }
+const c2cat = document.getElementById("c2cat"), c2pt = document.getElementById("c2pt"), c2eng = document.getElementById("c2eng");
+fillSelect(c2cat, catKeys.map(c => [c, CATS[c].label]));
+fillSelect(c2eng, engKeys.map(e => [e, ENG[e]]));
+function drawEx2() {
+  const svg = document.getElementById("ex2svg"); svg.replaceChildren();
+  const rows = DATA.brands.filter(b => b.category === c2cat.value && b.prompt_type === c2pt.value && b.engine === c2eng.value)
+    .sort((a, b) => Math.max(b.search, b.memory) - Math.max(a.search, a.memory)).slice(0, 14);
+  const L = 160, R = 150, T = 24, rowH = 28;
+  const W = Math.max(640, svg.parentNode.clientWidth || 900), H = T + rows.length * rowH + 30;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("width", W); svg.setAttribute("height", H);
+  const x = v => L + v / 100 * (W - L - R);
+  [0, 25, 50, 75, 100].forEach(t => { el("line", { x1: x(t), x2: x(t), y1: T - 8, y2: H - 26, class: "grid" }, svg); txt(svg, x(t), H - 10, t + "%", { "text-anchor": "middle" }); });
+  txt(svg, L, 12, "Visibility (% of answering runs)");
+  rows.forEach((r, i) => {
+    const cy = T + i * rowH + rowH / 2;
+    txt(svg, 0, cy + 4, r.brand, { class: "lbl" });
+    el("line", { x1: x(r.memory), x2: x(r.search), y1: cy, y2: cy, stroke: "var(--axis)", "stroke-width": 2 }, svg);
+    const g = el("g", {}, svg);
+    el("rect", { x: x(Math.min(r.memory, r.search)) - 10, y: cy - 12, width: Math.abs(x(r.search) - x(r.memory)) + 20, height: 24, fill: "transparent" }, g);
+    el("circle", { cx: x(r.search), cy, r: 5.5, fill: "var(--search)", stroke: "var(--surface)", "stroke-width": 2 }, g);
+    el("circle", { cx: x(r.memory), cy, r: 7, fill: "none", stroke: "var(--memory)", "stroke-width": 2.5 }, g);
+    hover(g, [[fmt(r.memory) + "%", "memory"], [fmt(r.search) + "%", "search on"], [(r.lift > 0 ? "+" : "") + fmt(r.lift) + " pts", `lift (95% CI ${fmt(r.lift_lo)} to ${fmt(r.lift_hi)})`], [r.bucket, r.significant ? "· significant" : "· not significant"]]);
+    const fo = el("foreignObject", { x: W - R + 12, y: cy - 12, width: R - 12, height: 24 }, svg);
+    const chip = document.createElement("span"); chip.className = "chipb"; chip.dataset.b = r.bucket; chip.textContent = r.bucket; fo.appendChild(chip);
+  });
+  const cap = document.getElementById("ex2cap");
+  const n = rows[0] ? `${rows[0].n_memory} memory and ${rows[0].n_search} search-on answering runs.` : "No brands named in this cell.";
+  cap.textContent = `Prompt: “${CATS[c2cat.value].prompts[c2pt.value]}” ${n} Top 14 brands by peak visibility. Hover a row for the lift and its confidence interval.`;
+}
+[c2cat, c2pt, c2eng].forEach(s => s.addEventListener("change", drawEx2));
+
+/* Exhibit 3: grouped columns, memory vs search mean cross-engine range */
+function drawEx3() {
+  const svg = document.getElementById("ex3svg"); svg.replaceChildren();
+  const groups = [];
+  catKeys.forEach(c => ["broad", "situational"].forEach(p => {
+    const m = DATA.cross_engine.find(k => k.category === c && k.prompt_type === p && k.condition === "memory");
+    const s = DATA.cross_engine.find(k => k.category === c && k.prompt_type === p && k.condition === "search");
+    if (m && s) groups.push({ c, p, m, s });
+  }));
+  const L = 44, R = 10, T = 20, B = 58;
+  const W = Math.max(640, svg.parentNode.clientWidth || 900), H = 300;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("width", W); svg.setAttribute("height", H);
+  const maxV = Math.max(10, ...groups.flatMap(g => [g.m.mean_range, g.s.mean_range]));
+  const top = Math.ceil(maxV / 10) * 10;
+  const y = v => T + (1 - v / top) * (H - T - B);
+  const step = top <= 50 ? 10 : 20;
+  for (let t = 0; t <= top; t += step) { el("line", { x1: L, x2: W - R, y1: y(t), y2: y(t), class: t === 0 ? "base" : "grid" }, svg); txt(svg, L - 8, y(t) + 4, Math.round(t) + "", { "text-anchor": "end" }); }
+  txt(svg, 0, 12, "Mean cross-engine range (points)");
+  const band = (W - L - R) / groups.length, bw = Math.min(24, band / 3.2);
+  groups.forEach((g, i) => {
+    const cx = L + band * i + band / 2;
+    [["m", g.m, "var(--memory)", -1], ["s", g.s, "var(--search)", 1]].forEach(([k, d, col, side]) => {
+      const x0 = cx + (side < 0 ? -bw - 1 : 1), h = y(0) - y(d.mean_range);
+      const gg = el("g", {}, svg);
+      el("rect", { x: x0 - 4, y: T, width: bw + 8, height: H - T - B, fill: "transparent" }, gg);
+      el("path", { d: `M${x0},${y(0)} v${-Math.max(0, h - 4)} q0,-4 4,-4 h${bw - 8} q4,0 4,4 v${Math.max(0, h - 4)} z`, fill: col }, gg);
+      hover(gg, [[fmt(d.mean_range) + " pts", k === "m" ? "memory" : "search on"], [`${d.brands_50pt} of ${d.n_brands}`, "brands with a 50+ pt range"], [`${CATS[g.c].label} · ${g.p}`, ""]]);
+    });
+    txt(svg, cx, H - B + 18, CATS[g.c].label.split(" ")[0] + (CATS[g.c].label.split(" ")[1] ? " " + CATS[g.c].label.split(" ")[1] : ""), { "text-anchor": "middle" });
+    txt(svg, cx, H - B + 34, g.p, { "text-anchor": "middle", fill: "var(--muted)" });
+  });
+}
+
+/* Layer Lens */
+const lcat = document.getElementById("lcat"), lbrand = document.getElementById("lbrand");
+fillSelect(lcat, catKeys.map(c => [c, CATS[c].label]));
+function brandsFor(c) {
+  const peak = {};
+  DATA.brands.filter(b => b.category === c).forEach(b => { peak[b.brand] = Math.max(peak[b.brand] || 0, b.search, b.memory); });
+  return Object.keys(peak).sort((a, b) => peak[b] - peak[a]);
+}
+function drawLens() {
+  const grid = document.getElementById("lensgrid"); grid.replaceChildren();
+  const rows = DATA.brands.filter(b => b.category === lcat.value && b.brand === lbrand.value);
+  engKeys.forEach(e => ["broad", "situational"].forEach(p => {
+    const r = rows.find(k => k.engine === e && k.prompt_type === p);
+    const card = document.createElement("div"); card.className = "lcard";
+    const h = document.createElement("div"); h.className = "row";
+    const a = document.createElement("strong"); a.textContent = `${ENG[e].replace(" (API)", "")} · ${p}`;
+    h.appendChild(a);
+    if (r) { const c = document.createElement("span"); c.className = "chipb"; c.dataset.b = r.bucket; c.textContent = r.bucket; h.appendChild(c); }
+    card.appendChild(h);
+    const add = (l, v) => { const d = document.createElement("div"); d.className = "row"; const s1 = document.createElement("span"); s1.textContent = l; const s2 = document.createElement("span"); s2.textContent = v; d.append(s1, s2); card.appendChild(d); };
+    if (!r) { add("Not named in this cell", ""); grid.appendChild(card); return; }
+    const mov = r.search > 0 ? Math.max(0, r.search - r.memory) / r.search * 100 : 0;
+    add("Memory visibility", fmt(r.memory) + "%");
+    add("Search visibility", fmt(r.search) + "%");
+    add("Search lift", `${r.lift > 0 ? "+" : ""}${fmt(r.lift)} pts [${fmt(r.lift_lo)}, ${fmt(r.lift_hi)}]${r.significant ? "" : " · n.s."}`);
+    add("Movable share", fmt(mov) + "%");
+    const m = document.createElement("div"); m.className = "meter"; const i = document.createElement("i"); i.style.width = Math.min(100, mov) + "%"; m.appendChild(i); card.appendChild(m);
+    grid.appendChild(card);
+  }));
+}
+lcat.addEventListener("change", () => { fillSelect(lbrand, brandsFor(lcat.value).map(b => [b, b])); drawLens(); });
+lbrand.addEventListener("change", drawLens);
+fillSelect(lbrand, brandsFor(lcat.value).map(b => [b, b]), DATA.lens_default && DATA.lens_default.brand);
+if (DATA.lens_default) { lcat.value = DATA.lens_default.category; fillSelect(lbrand, brandsFor(lcat.value).map(b => [b, b]), DATA.lens_default.brand); }
+
+/* Data table + CSV */
+const COLS = ["category", "prompt_type", "engine", "brand", "memory", "search", "lift", "lift_lo", "lift_hi", "q", "bucket", "n_memory", "n_search"];
+(function () {
+  const t = document.getElementById("datatable");
+  const hr = document.createElement("tr");
+  COLS.forEach(c => { const th = document.createElement("th"); th.textContent = c; if (!["category", "prompt_type", "engine", "brand", "bucket"].includes(c)) th.className = "n"; hr.appendChild(th); });
+  const thead = document.createElement("thead"); thead.appendChild(hr); t.appendChild(thead);
+  const tb = document.createElement("tbody");
+  DATA.brands.slice().sort((a, b) => a.category.localeCompare(b.category) || a.prompt_type.localeCompare(b.prompt_type) || a.engine.localeCompare(b.engine) || b.search - a.search).forEach(r => {
+    const tr = document.createElement("tr");
+    COLS.forEach(c => { const td = document.createElement("td"); td.textContent = r[c] == null ? "" : r[c]; if (!["category", "prompt_type", "engine", "brand", "bucket"].includes(c)) td.className = "n"; tr.appendChild(td); });
+    tb.appendChild(tr);
+  });
+  t.appendChild(tb);
+  document.getElementById("copycsv").addEventListener("click", async () => {
+    const csv = [COLS.join(",")].concat(DATA.brands.map(r => COLS.map(c => { const v = r[c] == null ? "" : String(r[c]); return /[",]/.test(v) ? `"${v.replace(/"/g, '""')}"` : v; }).join(","))).join("\n");
+    const msg = document.getElementById("copymsg");
+    try { await navigator.clipboard.writeText(csv); msg.textContent = `Copied ${DATA.brands.length} rows.`; } catch (e) { msg.textContent = "Copy was blocked by the browser. Select the table and copy it instead."; }
+  });
+})();
+
+function drawAll() { drawEx1(); drawEx2(); drawEx3(); drawLens(); }
+drawAll();
+let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(drawAll, 150); });
+</script>
+</body>
+</html>

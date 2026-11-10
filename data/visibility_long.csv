@@ -1,0 +1,413 @@
+category,prompt_type,engine,condition,brand,visibility
+crypto,broad,anthropic,memory,Coinbase,100.0
+crypto,broad,anthropic,memory,Kraken,100.0
+crypto,broad,anthropic,memory,Gemini (exchange),100.0
+crypto,broad,anthropic,memory,Crypto.com,40.0
+crypto,broad,anthropic,memory,Binance,100.0
+crypto,broad,anthropic,memory,OKX,88.0
+crypto,broad,anthropic,memory,Bybit,76.0
+crypto,broad,anthropic,memory,KuCoin,68.0
+crypto,broad,anthropic,memory,Bitstamp,32.0
+crypto,broad,anthropic,memory,Bitget,8.0
+crypto,broad,anthropic,memory,Uniswap,44.0
+crypto,broad,anthropic,memory,PancakeSwap,24.0
+crypto,broad,anthropic,search,Coinbase,100.0
+crypto,broad,anthropic,search,Kraken,100.0
+crypto,broad,anthropic,search,Gemini (exchange),96.6
+crypto,broad,anthropic,search,Crypto.com,96.6
+crypto,broad,anthropic,search,Binance,96.6
+crypto,broad,anthropic,search,OKX,96.6
+crypto,broad,anthropic,search,Robinhood,10.3
+crypto,broad,anthropic,search,Bybit,93.1
+crypto,broad,anthropic,search,KuCoin,89.7
+crypto,broad,anthropic,search,Bitstamp,6.9
+crypto,broad,anthropic,search,eToro,41.4
+crypto,broad,anthropic,search,Bitget,20.7
+crypto,broad,anthropic,search,Uphold,41.4
+crypto,broad,anthropic,search,Uniswap,100.0
+crypto,broad,anthropic,search,PancakeSwap,44.8
+crypto,broad,google,memory,Coinbase,100.0
+crypto,broad,google,memory,Kraken,100.0
+crypto,broad,google,memory,Crypto.com,40.0
+crypto,broad,google,memory,Binance,100.0
+crypto,broad,google,memory,OKX,66.7
+crypto,broad,google,memory,Robinhood,6.7
+crypto,broad,google,memory,Bybit,83.3
+crypto,broad,google,memory,Webull,3.3
+crypto,broad,google,memory,Cash App,3.3
+crypto,broad,google,memory,PayPal,30.0
+crypto,broad,google,memory,Uniswap,86.7
+crypto,broad,google,memory,PancakeSwap,16.7
+crypto,broad,openai,memory,Coinbase,100.0
+crypto,broad,openai,memory,Kraken,100.0
+crypto,broad,openai,memory,Gemini (exchange),100.0
+crypto,broad,openai,memory,Crypto.com,60.0
+crypto,broad,openai,memory,Binance,100.0
+crypto,broad,openai,memory,OKX,86.7
+crypto,broad,openai,memory,Bybit,73.3
+crypto,broad,openai,memory,KuCoin,33.3
+crypto,broad,openai,memory,Bitstamp,53.3
+crypto,broad,openai,memory,Uniswap,73.3
+crypto,broad,openai,memory,PancakeSwap,73.3
+crypto,broad,openai,search,Coinbase,100.0
+crypto,broad,openai,search,Kraken,100.0
+crypto,broad,openai,search,Gemini (exchange),100.0
+crypto,broad,openai,search,Crypto.com,100.0
+crypto,broad,openai,search,Binance,80.0
+crypto,broad,openai,search,OKX,13.3
+crypto,broad,openai,search,Robinhood,46.7
+crypto,broad,openai,search,Bybit,6.7
+crypto,broad,openai,search,Bitstamp,6.7
+crypto,broad,openai,search,eToro,6.7
+crypto,broad,openai,search,Cash App,33.3
+crypto,broad,openai,search,Uniswap,13.3
+crypto,situational,anthropic,memory,Coinbase,100.0
+crypto,situational,anthropic,memory,Kraken,100.0
+crypto,situational,anthropic,memory,Gemini (exchange),100.0
+crypto,situational,anthropic,search,Coinbase,100.0
+crypto,situational,anthropic,search,Kraken,96.0
+crypto,situational,anthropic,search,Gemini (exchange),100.0
+crypto,situational,anthropic,search,Crypto.com,92.0
+crypto,situational,anthropic,search,Binance,92.0
+crypto,situational,anthropic,search,OKX,16.0
+crypto,situational,anthropic,search,Robinhood,100.0
+crypto,situational,anthropic,search,Bybit,4.0
+crypto,situational,anthropic,search,KuCoin,36.0
+crypto,situational,anthropic,search,Bitstamp,28.0
+crypto,situational,anthropic,search,eToro,28.0
+crypto,situational,anthropic,search,Uphold,36.0
+crypto,situational,google,memory,Coinbase,96.7
+crypto,situational,google,memory,Kraken,100.0
+crypto,situational,google,memory,Gemini (exchange),43.3
+crypto,situational,google,memory,Crypto.com,20.0
+crypto,situational,google,memory,Binance,13.3
+crypto,situational,google,memory,Robinhood,23.3
+crypto,situational,google,memory,KuCoin,3.3
+crypto,situational,google,memory,Webull,6.7
+crypto,situational,google,memory,Cash App,33.3
+crypto,situational,google,memory,PayPal,13.3
+crypto,situational,openai,memory,Coinbase,100.0
+crypto,situational,openai,memory,Kraken,66.7
+crypto,situational,openai,memory,Gemini (exchange),100.0
+crypto,situational,openai,memory,Binance,6.7
+crypto,situational,openai,memory,Robinhood,26.7
+crypto,situational,openai,memory,Cash App,53.3
+crypto,situational,openai,memory,PayPal,6.7
+crypto,situational,openai,search,Coinbase,100.0
+crypto,situational,openai,search,Kraken,100.0
+crypto,situational,openai,search,Gemini (exchange),100.0
+crypto,situational,openai,search,Crypto.com,53.3
+crypto,situational,openai,search,Binance,60.0
+crypto,situational,openai,search,OKX,13.3
+crypto,situational,openai,search,Robinhood,100.0
+crypto,situational,openai,search,Bybit,6.7
+crypto,situational,openai,search,Bitstamp,13.3
+crypto,situational,openai,search,Cash App,86.7
+crypto,situational,openai,search,PayPal,53.3
+live_sports,broad,anthropic,memory,YouTube TV,100.0
+live_sports,broad,anthropic,memory,Fubo,100.0
+live_sports,broad,anthropic,memory,Sling TV,61.5
+live_sports,broad,anthropic,memory,Hulu + Live TV,100.0
+live_sports,broad,anthropic,memory,DirecTV,42.3
+live_sports,broad,anthropic,memory,ESPN,100.0
+live_sports,broad,anthropic,memory,Peacock,100.0
+live_sports,broad,anthropic,memory,Paramount+,92.3
+live_sports,broad,anthropic,memory,Amazon Prime Video,11.5
+live_sports,broad,anthropic,memory,Apple TV,61.5
+live_sports,broad,anthropic,memory,Max,11.5
+live_sports,broad,anthropic,memory,DAZN,30.8
+live_sports,broad,anthropic,memory,NBA League Pass,100.0
+live_sports,broad,anthropic,memory,NFL+,69.2
+live_sports,broad,anthropic,memory,MLB.TV,57.7
+live_sports,broad,anthropic,search,YouTube TV,100.0
+live_sports,broad,anthropic,search,Fubo,100.0
+live_sports,broad,anthropic,search,Sling TV,100.0
+live_sports,broad,anthropic,search,Hulu + Live TV,86.7
+live_sports,broad,anthropic,search,DirecTV,63.3
+live_sports,broad,anthropic,search,ESPN,100.0
+live_sports,broad,anthropic,search,Peacock,93.3
+live_sports,broad,anthropic,search,Paramount+,60.0
+live_sports,broad,anthropic,search,Amazon Prime Video,3.3
+live_sports,broad,anthropic,search,Apple TV,6.7
+live_sports,broad,anthropic,search,Max,3.3
+live_sports,broad,anthropic,search,MLB.TV,3.3
+live_sports,broad,anthropic,search,NHL (ESPN+),3.3
+live_sports,broad,anthropic,search,Fox One,10.0
+live_sports,broad,anthropic,search,CHSN,73.3
+live_sports,broad,google,memory,YouTube TV,100.0
+live_sports,broad,google,memory,Fubo,100.0
+live_sports,broad,google,memory,Sling TV,63.3
+live_sports,broad,google,memory,Hulu + Live TV,76.7
+live_sports,broad,google,memory,DirecTV,26.7
+live_sports,broad,google,memory,ESPN,100.0
+live_sports,broad,google,memory,Peacock,96.7
+live_sports,broad,google,memory,Paramount+,93.3
+live_sports,broad,google,memory,Amazon Prime Video,73.3
+live_sports,broad,google,memory,Apple TV,80.0
+live_sports,broad,google,memory,Netflix,3.3
+live_sports,broad,google,memory,Max,16.7
+live_sports,broad,google,memory,DAZN,6.7
+live_sports,broad,google,memory,NBA League Pass,56.7
+live_sports,broad,google,memory,NFL+,16.7
+live_sports,broad,google,memory,MLB.TV,40.0
+live_sports,broad,openai,memory,YouTube TV,100.0
+live_sports,broad,openai,memory,Fubo,100.0
+live_sports,broad,openai,memory,Sling TV,60.0
+live_sports,broad,openai,memory,Hulu + Live TV,100.0
+live_sports,broad,openai,memory,DirecTV,46.7
+live_sports,broad,openai,memory,ESPN,100.0
+live_sports,broad,openai,memory,Peacock,100.0
+live_sports,broad,openai,memory,Paramount+,100.0
+live_sports,broad,openai,memory,Amazon Prime Video,86.7
+live_sports,broad,openai,memory,Apple TV,86.7
+live_sports,broad,openai,memory,Max,13.3
+live_sports,broad,openai,memory,DAZN,60.0
+live_sports,broad,openai,memory,NBA League Pass,73.3
+live_sports,broad,openai,memory,NFL+,33.3
+live_sports,broad,openai,memory,MLB.TV,73.3
+live_sports,broad,openai,memory,NHL (ESPN+),40.0
+live_sports,broad,openai,search,YouTube TV,100.0
+live_sports,broad,openai,search,Fubo,100.0
+live_sports,broad,openai,search,Sling TV,100.0
+live_sports,broad,openai,search,Hulu + Live TV,100.0
+live_sports,broad,openai,search,ESPN,100.0
+live_sports,broad,openai,search,Peacock,100.0
+live_sports,broad,openai,search,Paramount+,93.3
+live_sports,broad,openai,search,Amazon Prime Video,86.7
+live_sports,broad,openai,search,Apple TV,20.0
+live_sports,broad,openai,search,Netflix,33.3
+live_sports,broad,openai,search,Max,6.7
+live_sports,broad,openai,search,DAZN,6.7
+live_sports,broad,openai,search,NBA League Pass,33.3
+live_sports,broad,openai,search,MLB.TV,46.7
+live_sports,broad,openai,search,NHL (ESPN+),6.7
+live_sports,situational,anthropic,memory,YouTube TV,100.0
+live_sports,situational,anthropic,memory,Fubo,90.0
+live_sports,situational,anthropic,memory,Sling TV,6.7
+live_sports,situational,anthropic,memory,Hulu + Live TV,36.7
+live_sports,situational,anthropic,memory,DirecTV,6.7
+live_sports,situational,anthropic,memory,ESPN,63.3
+live_sports,situational,anthropic,memory,Peacock,3.3
+live_sports,situational,anthropic,memory,Paramount+,3.3
+live_sports,situational,anthropic,memory,NBA League Pass,33.3
+live_sports,situational,anthropic,memory,NFL+,26.7
+live_sports,situational,anthropic,memory,CHSN,90.0
+live_sports,situational,anthropic,memory,NBC Sports Chicago,93.3
+live_sports,situational,anthropic,search,YouTube TV,88.9
+live_sports,situational,anthropic,search,Fubo,72.2
+live_sports,situational,anthropic,search,Sling TV,55.6
+live_sports,situational,anthropic,search,Hulu + Live TV,61.1
+live_sports,situational,anthropic,search,DirecTV,38.9
+live_sports,situational,anthropic,search,ESPN,88.9
+live_sports,situational,anthropic,search,Peacock,11.1
+live_sports,situational,anthropic,search,Paramount+,5.6
+live_sports,situational,anthropic,search,Netflix,5.6
+live_sports,situational,anthropic,search,CHSN,88.9
+live_sports,situational,anthropic,search,NBC Sports Chicago,33.3
+live_sports,situational,google,memory,YouTube TV,100.0
+live_sports,situational,google,memory,Fubo,96.7
+live_sports,situational,google,memory,Sling TV,73.3
+live_sports,situational,google,memory,Hulu + Live TV,76.7
+live_sports,situational,google,memory,DirecTV,30.0
+live_sports,situational,google,memory,ESPN,100.0
+live_sports,situational,google,memory,Peacock,33.3
+live_sports,situational,google,memory,Paramount+,10.0
+live_sports,situational,google,memory,Amazon Prime Video,70.0
+live_sports,situational,google,memory,Netflix,6.7
+live_sports,situational,google,memory,Max,10.0
+live_sports,situational,google,memory,Philo,3.3
+live_sports,situational,google,memory,NBA League Pass,30.0
+live_sports,situational,google,memory,CHSN,50.0
+live_sports,situational,google,memory,NBC Sports Chicago,93.3
+live_sports,situational,openai,memory,YouTube TV,100.0
+live_sports,situational,openai,memory,Fubo,60.0
+live_sports,situational,openai,memory,Sling TV,93.3
+live_sports,situational,openai,memory,Hulu + Live TV,86.7
+live_sports,situational,openai,memory,DirecTV,60.0
+live_sports,situational,openai,memory,ESPN,100.0
+live_sports,situational,openai,memory,Peacock,26.7
+live_sports,situational,openai,memory,Paramount+,6.7
+live_sports,situational,openai,memory,Amazon Prime Video,26.7
+live_sports,situational,openai,memory,Max,6.7
+live_sports,situational,openai,memory,NBA League Pass,6.7
+live_sports,situational,openai,memory,CHSN,80.0
+live_sports,situational,openai,memory,NBC Sports Chicago,20.0
+live_sports,situational,openai,search,YouTube TV,100.0
+live_sports,situational,openai,search,Fubo,86.7
+live_sports,situational,openai,search,Sling TV,80.0
+live_sports,situational,openai,search,Hulu + Live TV,80.0
+live_sports,situational,openai,search,DirecTV,53.3
+live_sports,situational,openai,search,ESPN,100.0
+live_sports,situational,openai,search,Peacock,80.0
+live_sports,situational,openai,search,Paramount+,53.3
+live_sports,situational,openai,search,Amazon Prime Video,73.3
+live_sports,situational,openai,search,Netflix,26.7
+live_sports,situational,openai,search,NBA League Pass,13.3
+live_sports,situational,openai,search,NFL+,40.0
+live_sports,situational,openai,search,CHSN,100.0
+meal_kits,broad,anthropic,memory,HelloFresh,100.0
+meal_kits,broad,anthropic,memory,Green Chef,100.0
+meal_kits,broad,anthropic,memory,Home Chef,100.0
+meal_kits,broad,anthropic,memory,Blue Apron,100.0
+meal_kits,broad,anthropic,memory,Sunbasket,100.0
+meal_kits,broad,anthropic,memory,Purple Carrot,86.2
+meal_kits,broad,anthropic,memory,Dinnerly,93.1
+meal_kits,broad,anthropic,memory,Marley Spoon,51.7
+meal_kits,broad,anthropic,memory,CookUnity,13.8
+meal_kits,broad,anthropic,memory,Gobble,13.8
+meal_kits,broad,anthropic,memory,Trifecta,34.5
+meal_kits,broad,anthropic,memory,Freshly,13.8
+meal_kits,broad,anthropic,search,HelloFresh,100.0
+meal_kits,broad,anthropic,search,Green Chef,96.4
+meal_kits,broad,anthropic,search,Home Chef,100.0
+meal_kits,broad,anthropic,search,Blue Apron,100.0
+meal_kits,broad,anthropic,search,Sunbasket,14.3
+meal_kits,broad,anthropic,search,Purple Carrot,100.0
+meal_kits,broad,anthropic,search,Dinnerly,100.0
+meal_kits,broad,anthropic,search,Hungryroot,100.0
+meal_kits,broad,anthropic,search,Marley Spoon,67.9
+meal_kits,broad,anthropic,search,CookUnity,53.6
+meal_kits,broad,anthropic,search,Gobble,64.3
+meal_kits,broad,anthropic,search,Tovala,67.9
+meal_kits,broad,anthropic,search,Trifecta,3.6
+meal_kits,broad,anthropic,search,Tempo,28.6
+meal_kits,broad,google,memory,HelloFresh,100.0
+meal_kits,broad,google,memory,Green Chef,100.0
+meal_kits,broad,google,memory,Home Chef,90.0
+meal_kits,broad,google,memory,Blue Apron,73.3
+meal_kits,broad,google,memory,Sunbasket,13.3
+meal_kits,broad,google,memory,Purple Carrot,76.7
+meal_kits,broad,google,memory,Dinnerly,80.0
+meal_kits,broad,google,memory,Marley Spoon,33.3
+meal_kits,broad,openai,memory,HelloFresh,100.0
+meal_kits,broad,openai,memory,Green Chef,100.0
+meal_kits,broad,openai,memory,Home Chef,100.0
+meal_kits,broad,openai,memory,Blue Apron,100.0
+meal_kits,broad,openai,memory,Sunbasket,80.0
+meal_kits,broad,openai,memory,Purple Carrot,100.0
+meal_kits,broad,openai,memory,Dinnerly,80.0
+meal_kits,broad,openai,memory,Hungryroot,6.7
+meal_kits,broad,openai,memory,Marley Spoon,46.7
+meal_kits,broad,openai,memory,CookUnity,20.0
+meal_kits,broad,openai,memory,Gobble,20.0
+meal_kits,broad,openai,search,HelloFresh,100.0
+meal_kits,broad,openai,search,Green Chef,100.0
+meal_kits,broad,openai,search,Home Chef,100.0
+meal_kits,broad,openai,search,Blue Apron,100.0
+meal_kits,broad,openai,search,Sunbasket,20.0
+meal_kits,broad,openai,search,Purple Carrot,100.0
+meal_kits,broad,openai,search,Dinnerly,40.0
+meal_kits,broad,openai,search,Hungryroot,33.3
+meal_kits,broad,openai,search,Marley Spoon,40.0
+meal_kits,broad,openai,search,CookUnity,66.7
+meal_kits,broad,openai,search,Gobble,6.7
+meal_kits,situational,anthropic,memory,HelloFresh,100.0
+meal_kits,situational,anthropic,memory,Green Chef,93.1
+meal_kits,situational,anthropic,memory,Home Chef,13.8
+meal_kits,situational,anthropic,memory,Blue Apron,20.7
+meal_kits,situational,anthropic,memory,Purple Carrot,44.8
+meal_kits,situational,anthropic,memory,Dinnerly,100.0
+meal_kits,situational,anthropic,search,HelloFresh,100.0
+meal_kits,situational,anthropic,search,Green Chef,100.0
+meal_kits,situational,anthropic,search,Home Chef,100.0
+meal_kits,situational,anthropic,search,Blue Apron,60.7
+meal_kits,situational,anthropic,search,Sunbasket,14.3
+meal_kits,situational,anthropic,search,Purple Carrot,46.4
+meal_kits,situational,anthropic,search,Dinnerly,21.4
+meal_kits,situational,anthropic,search,Hungryroot,3.6
+meal_kits,situational,anthropic,search,Marley Spoon,14.3
+meal_kits,situational,anthropic,search,CookUnity,7.1
+meal_kits,situational,anthropic,search,Gobble,3.6
+meal_kits,situational,google,memory,HelloFresh,100.0
+meal_kits,situational,google,memory,Green Chef,93.3
+meal_kits,situational,google,memory,Home Chef,50.0
+meal_kits,situational,google,memory,Sunbasket,6.7
+meal_kits,situational,google,memory,Purple Carrot,3.3
+meal_kits,situational,google,memory,Dinnerly,16.7
+meal_kits,situational,google,memory,Hungryroot,3.3
+meal_kits,situational,google,memory,Marley Spoon,56.7
+meal_kits,situational,openai,memory,HelloFresh,100.0
+meal_kits,situational,openai,memory,Green Chef,93.3
+meal_kits,situational,openai,memory,Home Chef,93.3
+meal_kits,situational,openai,memory,Blue Apron,66.7
+meal_kits,situational,openai,memory,Sunbasket,6.7
+meal_kits,situational,openai,memory,Purple Carrot,60.0
+meal_kits,situational,openai,memory,Dinnerly,60.0
+meal_kits,situational,openai,memory,Hungryroot,13.3
+meal_kits,situational,openai,memory,Marley Spoon,6.7
+meal_kits,situational,openai,memory,Gobble,20.0
+meal_kits,situational,openai,search,HelloFresh,100.0
+meal_kits,situational,openai,search,Green Chef,73.3
+meal_kits,situational,openai,search,Home Chef,93.3
+meal_kits,situational,openai,search,Blue Apron,46.7
+meal_kits,situational,openai,search,Sunbasket,6.7
+meal_kits,situational,openai,search,Purple Carrot,100.0
+meal_kits,situational,openai,search,Dinnerly,60.0
+meal_kits,situational,openai,search,Hungryroot,46.7
+meal_kits,situational,openai,search,CookUnity,13.3
+meal_kits,situational,openai,search,Gobble,6.7
+secured_cards,broad,anthropic,memory,Bank of America,20.0
+secured_cards,broad,anthropic,memory,Capital One,100.0
+secured_cards,broad,anthropic,memory,Chime,64.0
+secured_cards,broad,anthropic,memory,Discover,100.0
+secured_cards,broad,anthropic,memory,OpenSky,32.0
+secured_cards,broad,anthropic,memory,Self,32.0
+secured_cards,broad,anthropic,memory,U.S. Bank,4.0
+secured_cards,broad,anthropic,search,Bank of America,90.9
+secured_cards,broad,anthropic,search,Capital One,100.0
+secured_cards,broad,anthropic,search,Chime,18.2
+secured_cards,broad,anthropic,search,DCU,81.8
+secured_cards,broad,anthropic,search,Discover,90.9
+secured_cards,broad,anthropic,search,First Progress,45.5
+secured_cards,broad,anthropic,search,Navy Federal,22.7
+secured_cards,broad,anthropic,search,OpenSky,77.3
+secured_cards,broad,google,memory,Bank of America,3.3
+secured_cards,broad,google,memory,Capital One,100.0
+secured_cards,broad,google,memory,Chime,63.3
+secured_cards,broad,google,memory,Discover,100.0
+secured_cards,broad,google,memory,Navy Federal,3.3
+secured_cards,broad,google,memory,OpenSky,70.0
+secured_cards,broad,google,memory,U.S. Bank,53.3
+secured_cards,broad,openai,memory,Bank of America,93.3
+secured_cards,broad,openai,memory,Capital One,100.0
+secured_cards,broad,openai,memory,Chime,33.3
+secured_cards,broad,openai,memory,Discover,100.0
+secured_cards,broad,openai,memory,Navy Federal,40.0
+secured_cards,broad,openai,memory,OpenSky,100.0
+secured_cards,broad,openai,memory,Self,6.7
+secured_cards,broad,openai,memory,U.S. Bank,100.0
+secured_cards,broad,openai,search,Bank of America,86.7
+secured_cards,broad,openai,search,Capital One,100.0
+secured_cards,broad,openai,search,Chime,6.7
+secured_cards,broad,openai,search,DCU,20.0
+secured_cards,broad,openai,search,Discover,100.0
+secured_cards,broad,openai,search,Navy Federal,13.3
+secured_cards,broad,openai,search,OpenSky,86.7
+secured_cards,broad,openai,search,U.S. Bank,93.3
+secured_cards,situational,anthropic,memory,Capital One,100.0
+secured_cards,situational,anthropic,memory,Chime,40.0
+secured_cards,situational,anthropic,memory,Discover,100.0
+secured_cards,situational,anthropic,memory,Self,4.0
+secured_cards,situational,anthropic,search,Bank of America,12.0
+secured_cards,situational,anthropic,search,Capital One,100.0
+secured_cards,situational,anthropic,search,Chime,24.0
+secured_cards,situational,anthropic,search,Discover,100.0
+secured_cards,situational,anthropic,search,OpenSky,100.0
+secured_cards,situational,anthropic,search,Self,4.0
+secured_cards,situational,google,memory,Capital One,100.0
+secured_cards,situational,google,memory,Chime,3.3
+secured_cards,situational,google,memory,Discover,100.0
+secured_cards,situational,google,memory,OpenSky,60.0
+secured_cards,situational,google,memory,U.S. Bank,26.7
+secured_cards,situational,openai,memory,Bank of America,93.3
+secured_cards,situational,openai,memory,Capital One,100.0
+secured_cards,situational,openai,memory,Discover,100.0
+secured_cards,situational,openai,memory,Navy Federal,33.3
+secured_cards,situational,openai,memory,OpenSky,66.7
+secured_cards,situational,openai,memory,U.S. Bank,100.0
+secured_cards,situational,openai,search,Bank of America,100.0
+secured_cards,situational,openai,search,Capital One,100.0
+secured_cards,situational,openai,search,Discover,100.0
+secured_cards,situational,openai,search,Navy Federal,20.0
+secured_cards,situational,openai,search,OpenSky,33.3
+secured_cards,situational,openai,search,U.S. Bank,80.0

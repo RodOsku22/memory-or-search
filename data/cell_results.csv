@@ -1,0 +1,17 @@
+category,prompt_type,engine,tvd_memory_search,noise_floor,spearman,n_memory,n_search
+crypto,broad,anthropic,0.195,0.087,0.847,25,29
+crypto,broad,openai,0.395,0.164,0.632,15,15
+crypto,situational,anthropic,0.593,0.164,0.602,24,25
+crypto,situational,openai,0.326,0.175,0.886,15,15
+live_sports,broad,anthropic,0.323,0.108,0.535,26,30
+live_sports,broad,openai,0.235,0.126,0.848,15,15
+live_sports,situational,anthropic,0.268,0.136,0.798,30,18
+live_sports,situational,openai,0.233,0.143,0.855,15,15
+meal_kits,broad,anthropic,0.285,0.094,0.463,29,28
+meal_kits,broad,openai,0.15,0.099,0.95,15,15
+meal_kits,situational,anthropic,0.339,0.136,0.816,29,28
+meal_kits,situational,openai,0.152,0.145,0.875,15,15
+secured_cards,broad,anthropic,0.456,0.155,0.329,25,22
+secured_cards,broad,openai,0.103,0.093,0.855,15,15
+secured_cards,situational,anthropic,0.329,0.121,0.674,25,25
+secured_cards,situational,openai,0.098,0.089,0.947,15,15
