@@ -120,16 +120,15 @@ footer { color: var(--muted); font-size: 13px; border-top: 1px solid var(--rule)
 <header class="top">
   <div class="eyebrow">Independent research report &middot; pilot</div>
   <h1>Memory or Search? Where AI brand recommendations come from</h1>
-  <p class="lede">A one-night pilot on Petra Labs&rsquo; four product categories: 907 answers from ChatGPT, Claude and Gemini with web search turned off and on, to separate what a model already remembers about a brand from what it finds when it searches.</p>
+  <p class="lede">A pilot on Petra Labs&rsquo; four product categories: 907 answers from ChatGPT, Claude and Gemini with web search turned off and on, to separate what a model already remembers about a brand from what it finds when it searches.</p>
   <div class="byline">Rod Oskouian &middot; November 9, 2026 &middot; <span class="pilot">907 answers &middot; 15&ndash;30 runs per cell</span></div>
 </header>
 
 <section class="stack read">
-  <h2>Author's Note</h2>
+  <h2>Motivations</h2>
   
 <p>Petra Labs&rsquo; research keeps pointing at a layer it has not measured. The <a href="https://www.petralabs.com/intelligence/comparing-search-behavior-and-responses-across-generative-engines">cross-engine study</a> says it cannot tell whether a recommended brand comes from retrieved pages or from &ldquo;parametric memory,&rdquo; and calls that distinction central for GEO. <a href="https://www.petralabs.com/intelligence/how-are-seo-and-aeo-different">How Are SEO and AEO Different?</a> argues that models form a prior sense of a brand from training data, and that this prior can be influenced over time. The <a href="https://www.petralabs.com/intelligence/how-long-does-chatgpt-keep-citing-a-deleted-page">deleted-page study</a> deliberately used pages newer than the training cutoff to rule memory out.</p>
-<p>The cheapest way I could find to look at that layer is to ask the same question twice: once with web search off, so the model can only use what it learned in training, and once with search on. I built the harness, ran it and wrote this up in one evening with Claude Code. The sample sizes are small, so treat everything here as directional. The method is the point: it is cheap, repeatable, and it uses the prompts, brand lists and noise-floor approach Petra Labs has already published.</p>
-<p>&mdash; Rod Oskouian</p>
+<p>The cheapest way I could find to look at that layer is to ask the same question twice: once with web search off, so the model can only use what it learned in training, and once with search on. I built the harness, ran it and wrote this analysis by leveraging Claude Code. The sample sizes are small, so treat everything here as directional. The method is the point: it is cheap, repeatable, and it uses the prompts, brand lists and noise-floor approach Petra Labs has already published.</p>
 </section>
 
 <section class="stack">
